@@ -1,19 +1,10 @@
 ---
-title: 'MATH 324: Multiple Linear Regression project'
+title: 'Where Should Dad Buy His Car'
 author: "Shaurya Saxena"
 output:
   pdf_document: default
   html_notebook: default
 ---
-
-
-
-## Collaboration rules:  
-
-You may consult with up to two classmates for help with this project, but use your own data (must have different make/model/zip codes).  Please identify who you collaborate with here:
-
-Read this document before you submit it to ensure there is not a ton of extra output that does not contribute to the analysis or communication.  Also, I recommend using the spell-checker in RStudio (Edit -> Check Spelling).  Note that you will need to closely follow the instructions on the Canvas assignment page to complete this project successfully.  
-
 
 ```{r, echo = F, warning=FALSE, message=FALSE}
 # clean-up R environment
@@ -31,9 +22,9 @@ knitr::opts_chunk$set(echo = F)  #make it be a default to not include the code, 
 
 # suggestion for sourcing and wrangling data:
 
-raw_data1          <- read_csv("/Users/shauryasaxena/Documents/math_324/324 HWs/MLRCarProject/COcars.csv")  # read in the first location data
+raw_data1          <- read_csv("/Users/shauryasaxena/Documents/MLRCarProject/COcars.csv")  # read in the first location data
 raw_data1$location <- "Colorado"                  # add a variable 'location' to the first dataset
-raw_data2          <- read_csv("/Users/shauryasaxena/Documents/math_324/324 HWs/MLRCarProject/CAcars.csv") # read in the second location's data
+raw_data2          <- read_csv("/Users/shauryasaxena/Documents/HWs/MLRCarProject/CAcars.csv") # read in the second location's data
 raw_data2$location <- "California"                  # add a variable 'location' to the CA dataset
 car_data_raw <- rbind(raw_data1, raw_data2)        # combine the two datasets together by stacking the rows
 car_data <- car_data_raw %>% 
